@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Screen Face Guard"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Protection OFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtModelStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="13sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnToggle"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:text="START PROTECTION"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Settings"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtThreshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Female detection confidence: 75%" />
+
+        <SeekBar
+            android:id="@+id/seekThreshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="49" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchUncertain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Block uncertain faces" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Overlay style" />
+
+        <RadioGroup
+            android:id="@+id/rgStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbRect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rectangle" />
+
+            <RadioButton
+                android:id="@+id/rbRounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rounded" />
+
+            <RadioButton
+                android:id="@+id/rbOval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oval" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtPadding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Face-cover padding: 20%" />
+
+        <SeekBar
+            android:id="@+id/seekPadding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="40" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Detection frequency" />
+
+        <RadioGroup
+            android:id="@+id/rgFps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbFps5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 FPS" />
+
+            <RadioButton
+                android:id="@+id/rbFps10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 FPS" />
+
+            <RadioButton
+                android:id="@+id/rbFps15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 FPS" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Performance mode" />
+
+        <RadioGroup
+            android:id="@+id/rgPerf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Battery Saver" />
+
+            <RadioButton
+                android:id="@+id/rbBalanced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balanced" />
+
+            <RadioButton
+                android:id="@+id/rbFast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fast Protection" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Why these permissions?"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="• Screen capture: lets the app see the screen so it can find faces. Frames are analysed on your phone only, never saved or uploaded.\n\n• Display over other apps: needed to draw the black covers on top of other apps.\n\n• Notifications: shows that protection is running and gives a STOP button.\n\nNo contacts, SMS, call log, microphone or location access is requested. Protected content (FLAG_SECURE / DRM) cannot be captured by Android, so faces there cannot be covered. Gender estimation from appearance can be wrong, and capture plus processing always adds a small delay."
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>
